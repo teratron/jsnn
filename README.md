@@ -1,2 +1,2 @@
 # jsnn
-Neural Network Library for JavaScript
+Neural Network Library (JavaScript Edition)

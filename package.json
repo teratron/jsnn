@@ -3,25 +3,39 @@
   "version": "0.0.1",
   "description": "Neural network package",
   "main": "index.js",
-  "scripts": {
-    "start": "run start",
-    "build": "run build",
-    "test": "run test",
-    "eject": "run eject"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/teratron/jsnn.git"
+    "url": "git+https://github.com/zigenzoog/jsnn.git"
   },
   "keywords": [
+    "neuralnetwork",
     "neural",
     "network",
+    "perceptron",
     "javascript"
   ],
   "author": "Oleg Alexandrov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/teratron/jsnn/issues"
+    "url": "https://github.com/zigenzoog/jsnn/issues"
   },
-  "homepage": "https://github.com/teratron/jsnn#readme"
+  "homepage": "https://github.com/zigenzoog/jsnn#readme",
+  "scripts": {
+    "start:dev": "webpack-dev-server",
+    "start": "webpack-dev-server",
+    "build": "webpack",
+    "test": "",
+    "eject": ""
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/preset-env": "^7.14.5",
+    "babel-loader": "^8.2.2",
+    "html-webpack-plugin": "^5.3.1",
+    "jest": "^27.0.4",
+    "webpack": "^5.39.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  }
 }

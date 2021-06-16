@@ -1,2 +1,2 @@
 # jsnn
-Neural Network Library (JavaScript Edition)
+Neural Network Package (JavaScript Edition)

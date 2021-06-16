@@ -1,0 +1,27 @@
+{
+  "name": "jsnn",
+  "version": "0.0.1",
+  "description": "Neural network package",
+  "main": "index.js",
+  "scripts": {
+    "start": "run start",
+    "build": "run build",
+    "test": "run test",
+    "eject": "run eject"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teratron/jsnn.git"
+  },
+  "keywords": [
+    "neural",
+    "network",
+    "javascript"
+  ],
+  "author": "Oleg Alexandrov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/teratron/jsnn/issues"
+  },
+  "homepage": "https://github.com/teratron/jsnn#readme"
+}

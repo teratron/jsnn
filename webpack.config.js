@@ -2,6 +2,7 @@ const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const SemverWebpackPlugin = require('semver-extended-webpack-plugin');
 
 module.exports = {
     mode: 'production', // "production" | "development" | "none"
@@ -34,6 +35,13 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: './public/index.html'
+        }),
+        new SemverWebpackPlugin({
+            files: [path.resolve(__dirname, 'package.json')],
+            incArgs: ['patch'],
+            console: true,
+            buildDate: true,
+            version: '0.0.1'  // optional if you want to set the desired version
         })
     ],
     devServer: {

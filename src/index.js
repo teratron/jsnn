@@ -4,7 +4,7 @@ import {init} from './init.js';
 
 const nn = New('perceptron', 'config.json');
 
-nn.Init('ppp3');//
+nn.Init('ppp5');//
 nn.Train();
 nn.Verify();
 nn.Query();
@@ -31,5 +31,34 @@ function NN(...args) {
         return console.log('Query:', args);
     }
 }
+
+class NeuralNetwork {
+    constructor(args) {
+        this.args = args;
+        this.isInit = false;
+
+    }
+
+    Init() {
+        return console.log('class Init:', this.args);
+    }
+
+    Train() {
+        return console.log('class Train:', this.args);
+    }
+
+    Verify() {
+        return console.log('class Verify:', this.args);
+    }
+
+    Query() {
+        return console.log('class Query:', this.args);
+    }
+}
+
+let user = new NeuralNetwork('perceptron');
+
+user.Init();
+
 
 //export {New};

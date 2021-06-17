@@ -21,21 +21,36 @@
   },
   "homepage": "https://github.com/zigenzoog/jsnn#readme",
   "scripts": {
-    "start:dev": "webpack-dev-server",
-    "start": "webpack-dev-server",
     "build": "webpack",
-    "test": "",
+    "start": "webpack serve",
+    "start:dev": "webpack-dev-server --progress --colors",
+    "test": "echo \"Error: no test specified\" && exit 1",
     "eject": ""
   },
   "devDependencies": {
     "@babel/cli": "^7.14.5",
     "@babel/core": "^7.14.6",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
     "@babel/preset-env": "^7.14.5",
     "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
     "html-webpack-plugin": "^5.3.1",
     "jest": "^27.0.4",
+    "semver": "^6.3.0",
     "webpack": "^5.39.0",
     "webpack-cli": "^4.7.2",
     "webpack-dev-server": "^3.11.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }

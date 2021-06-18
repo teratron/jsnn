@@ -41,7 +41,7 @@ module.exports = {
             incArgs: ['patch'],
             console: true,
             buildDate: true,
-            version: '0.0.1'  // optional if you want to set the desired version
+            version: '0.0.1' // optional if you want to set the desired version
         })
     ],
     devServer: {

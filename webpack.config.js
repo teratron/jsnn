@@ -1,33 +1,32 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const {CleanWebpackPlugin} = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const SemverWebpackPlugin = require('semver-extended-webpack-plugin');
 
 module.exports = {
     mode: 'production', // "production" | "development" | "none"
     entry: path.resolve(__dirname, 'src', 'index.js'),
     module: {
-        rules: [
-            {
-                test: /\.m?(js|jsx)$/,
-                exclude: /(node_modules|bower_components)/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: [
-                            ['@babel/preset-env', {targets: "defaults"}]
-                        ],
-                        plugins: ['@babel/plugin-proposal-class-properties']
-                    }
+        rules: [{
+            test: /\.m?(js|jsx)$/,
+            exclude: /(node_modules|bower_components)/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: [
+                        ['@babel/preset-env', { targets: "defaults" }]
+                    ],
+                    plugins: ['@babel/plugin-proposal-class-properties']
                 }
             }
-        ]
+        }]
     },
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: '[name].bundle.js',
-        publicPath: 'auto'
+        chunkFilename: '[name].bundle.js',
+        publicPath: 'build/'
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),

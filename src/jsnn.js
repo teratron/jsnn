@@ -30,7 +30,7 @@ function getArc(name) {
 
 function getFileExt(name) /*Filer*/ {
     const index = name.lastIndexOf('.');
-    if (index > -1 && index < name.length - 1) {
+    if (index > 0 && index < name.length - 1) {
         name = name.substr(index);
         switch (name) {
             case '.json':

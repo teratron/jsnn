@@ -1,6 +1,6 @@
 {
   "name": "jsnn",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Neural network package",
   "main": "index.js",
   "keywords": [
@@ -55,5 +55,5 @@
       "last 1 safari version"
     ]
   },
-  "buildDate": "2021-06-19T19:28:10.212Z"
+  "buildDate": "2021-10-11T13:15:54.429Z"
 }

@@ -1,0 +1,59 @@
+{
+  "name": "jsnn",
+  "version": "0.0.7",
+  "description": "Neural network package",
+  "main": "index.js",
+  "keywords": [
+    "neuralnetwork",
+    "neural",
+    "network",
+    "perceptron",
+    "javascript"
+  ],
+  "author": "Oleg Alexandrov <alexandrovoleg.ru@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zigenzoog/jsnn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/zigenzoog/jsnn/issues"
+  },
+  "homepage": "https://github.com/zigenzoog/jsnn#readme",
+  "scripts": {
+    "build": "webpack",
+    "start": "webpack serve",
+    "start:dev": "webpack-dev-server --progress --colors",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "eject": ""
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.5",
+    "@babel/core": "^7.14.6",
+    "@babel/plugin-proposal-class-properties": "^7.14.5",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/preset-env": "^7.14.7",
+    "babel-loader": "^8.2.2",
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "copy-webpack-plugin": "^9.0.1",
+    "html-webpack-plugin": "^5.3.2",
+    "jest": "^27.0.6",
+    "semver-extended-webpack-plugin": "^1.3.0",
+    "webpack": "^5.43.0",
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "buildDate": "2021-10-11T13:15:54.429Z"
+}

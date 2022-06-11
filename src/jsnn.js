@@ -1,7 +1,7 @@
 'use strict'
 
-import perceptron from './perceptron/nn';
-import hopfield from './hopfield/nn';
+import perceptron from './arch/perceptron/nn';
+import hopfield from './arch/hopfield/nn';
 
 // New returns a new neural network instance.
 function New(...args) {

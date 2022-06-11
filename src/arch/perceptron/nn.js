@@ -1,6 +1,6 @@
 'use strict'
 
-import NeuralNetwork from '../nn';
+import NeuralNetwork from '../../nn';
 
 const NAME = 'perceptron';
 

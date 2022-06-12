@@ -7,7 +7,9 @@ const paths = require('./paths')
 module.exports = props => {
     return {
         entry: {
-            main: paths.src + '/index.js'
+            //main: paths.src + '/index.js',
+            //perceptron: paths.example + 'perceptron/index.js',
+            main: paths.example + 'perceptron/index.js'
         },
         output: {
             path: paths.build,
@@ -111,28 +113,18 @@ module.exports = props => {
             new HtmlWebpackPlugin({
                 title: "Jet - Template",
                 template: paths.public + '/template.html',
-                filename: 'template.html',
+                filename: 'index.html',
                 inject: 'body',
                 minify: false
-            }),
-            ...require('fs')
-                .readdirSync(paths.src + '/templates/pages')
-                .filter(fileName => fileName.endsWith('.js'))
-                .map(page => new HtmlWebpackPlugin({
-                        template: paths.src + `/templates/pages/${page}`,
-                        filename: page.replace(/.js/gi, '.html'),
-                        inject: 'body',
-                        minify: false
-                    })
-                )
+            })
         ],
         resolve: {
             modules: [paths.src, 'node_modules'],
             extensions: ['.js', '.jsx', '.json', '.css', '.scss', '.sass'],
             alias: {
                 '~': paths.src,
-                '@': paths.src + '/static/js',
-                jet$: paths.src + '/static/js/jet.js'
+                '@': paths.src + '/js',
+                jet$: paths.src + '/jet.js'
             }
         }
     }

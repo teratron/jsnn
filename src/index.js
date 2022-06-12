@@ -1,6 +1,6 @@
 'use strict'
 
-import New from './jsnn';
+/*import New from './jsnn';
 
 const nn = New('perceptron');
 
@@ -11,7 +11,7 @@ console.log(nn)
 nn.Init('ppp5');//
 nn.Train();
 nn.Verify();
-nn.Query();
+nn.Query();*/
 
 /*let name = 'name.json';
 let ext = name.includes('.') ? name.split('.') : '';

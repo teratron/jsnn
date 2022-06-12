@@ -1,10 +1,17 @@
 'use strict'
 
-import perceptron from './arch/perceptron/nn';
-import hopfield from './arch/hopfield/nn';
+
+export default class JSNN {
+    constructor(props) {
+    }
+}
+
+
+//import perceptron from './arch/perceptron/nn';
+//import hopfield from './arch/hopfield/nn';
 
 // New returns a new neural network instance.
-function New(...args) {
+/*function New(...args) {
     if (args.length > 0) {
         const arc = args[0].trim();
         switch (typeof arc) {
@@ -28,7 +35,7 @@ function getArc(name) {
     }
 }
 
-function getFileExt(name) /*Filer*/ {
+function getFileExt(name) /!*Filer*!/ {
     const index = name.lastIndexOf('.');
     if (index > 0 && index < name.length - 1) {
         name = name.substr(index);
@@ -42,7 +49,7 @@ function getFileExt(name) /*Filer*/ {
                 return 'error'//&FileError{Err: fmt.Errorf("extension isn't defined: %s", ext)}
         }
     }
-}
+}*/
 
 /*const (
 Perceptron = perceptron.Name
@@ -82,4 +89,4 @@ func Get(title string) pkg.NeuralNetwork {
     return nil
 }*/
 
-export default New;
+//export default New;

@@ -1,18 +1,16 @@
 'use strict'
 
-import {init} from './init';
-
 //
-class NeuralNetwork {
+/*class NeuralNetwork {
     constructor(props) {
         this.args = props;
         this.isInit = false;
         this.Init = init;
     }
 
-    /*Init() {
+    Init() {
        return console.log('class Init:', this.args);
-   }*/
+   }
 
     Train() {
         return console.log('class Train:', this.args);
@@ -25,7 +23,7 @@ class NeuralNetwork {
     Query() {
         return console.log('class Query:', this.args);
     }
-}
+}*/
 
 /*function NN(...args) {
     this.Init = init;/!*function () {
@@ -45,4 +43,4 @@ class NeuralNetwork {
     }
 }*/
 
-export default NeuralNetwork;
+//export default NeuralNetwork;

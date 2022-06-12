@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/zigenzoog/jsnn/issues"
   },
-  "homepage": "https://github.com/zigenzoog/jsnn#readme",
+  "homepage": "https://zigenzoog.github.io/jsnn",
   "devDependencies": {
     "@babel/core": "^7.18.2",
     "@babel/preset-env": "^7.18.2",

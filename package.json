@@ -4,7 +4,8 @@
   "description": "Neural network package for javascript",
   "main": "src/index.js",
   "keywords": [
-    "neuralnetwork",
+    "neural network",
+    "neural-network",
     "neural",
     "network",
     "perceptron",

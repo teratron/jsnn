@@ -45,7 +45,7 @@
     "build": "webpack --config config/webpack.prod.js",
     "start:dev": "webpack-dev-server --mode development",
     "start:prod": "webpack-dev-server --mode production",
-    "example:perceptron": "webpack serve examples/perceptron/index.js"
+    "example:perceptron": "webpack serve example/perceptron/index.js"
   },
   "browserslist": {
     "production": [

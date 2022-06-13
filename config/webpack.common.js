@@ -7,9 +7,9 @@ const paths = require('./paths')
 module.exports = props => {
     return {
         entry: {
-            //main: paths.src + '/index.js',
+            main: paths.src + '/index.js'
             //perceptron: paths.example + 'perceptron/index.js',
-            main: paths.example + 'perceptron/index.js'
+            //main: paths.example + 'perceptron/index.js'
         },
         output: {
             path: paths.build,
@@ -62,22 +62,6 @@ module.exports = props => {
                         },
                         'sass-loader'
                     ]
-                },
-                {
-                    test: /\.(hbs|handlebars)$/i,
-                    exclude: /node_modules/,
-                    loader: 'handlebars-loader',
-                    options: {
-                        helperDirs: [
-                            paths.src + '/templates/helpers'
-                        ],
-                        partialDirs: [
-                            paths.src + '/templates',
-                            paths.src + '/templates/partials',
-                            paths.src + '/templates/pages',
-                            paths.src + '/templates/layouts'
-                        ]
-                    }
                 },
                 {
                     test: /\.(svg|gif|png|jpe?g)$/i,

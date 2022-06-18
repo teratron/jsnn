@@ -1,6 +1,6 @@
 {
   "name": "jsnn",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Neural network package for javascript",
   "main": "src/index.js",
   "keywords": [
@@ -42,8 +42,8 @@
     "webpack-merge": "^5.8.0"
   },
   "scripts": {
-    "start": "webpack serve --config config/webpack.dev.js",
     "build": "webpack --config config/webpack.prod.js",
+    "start": "webpack serve --config config/webpack.dev.js",
     "start:dev": "webpack-dev-server --mode development",
     "start:prod": "webpack-dev-server --mode production",
     "example:perceptron": "webpack serve example/perceptron/index.js"
@@ -60,5 +60,5 @@
       "last 1 safari version"
     ]
   },
-  "buildDate": "2021-10-11T13:15:54.429Z"
+  "buildDate": "2022-06-18T07:27:01.804Z"
 }

@@ -1,6 +1,6 @@
 {
-    "short_name": "jet",
-    "name": "jet - Web Framework",
+    "short_name": "JSNN",
+    "name": "Neural Network Package for JavaScript",
     "icons": [
         {
             "src": "favicon.ico",

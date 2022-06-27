@@ -12,7 +12,7 @@ const config = merge(common({styleLoader: 'style-loader'}), {
     },
     devServer: {
         static: paths.build + '/static',
-        port: 9002,
+        port: 9001,
         historyApiFallback: true,
         compress: true,
         open: true,

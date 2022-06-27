@@ -1,8 +1,12 @@
 {
     "name": "jsnn",
-    "version": "0.0.9",
+    "version": "0.0.10",
     "description": "Neural network package for javascript",
     "main": "src/index.js",
+    "files": [
+        "dist/**/*.{js,map}",
+        "src/**/*.{scss,js}"
+    ],
     "keywords": [
         "neural network",
         "neural-network",
@@ -15,12 +19,12 @@
     "license": "ISC",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/zigenzoog/jsnn.git"
+        "url": "git+https://github.com/teratron/jsnn.git"
     },
     "bugs": {
-        "url": "https://github.com/zigenzoog/jsnn/issues"
+        "url": "https://github.com/teratron/jsnn/issues"
     },
-    "homepage": "https://zigenzoog.github.io/jsnn",
+    "homepage": "https://teratron.github.io/jsnn",
     "devDependencies": {
         "@babel/core": "^7.18.5",
         "@babel/preset-env": "^7.18.2",
@@ -42,9 +46,14 @@
         "webpack-merge": "^5.8.0"
     },
     "scripts": {
-        "build": "webpack --config config/webpack.prod.js",
-        "start": "webpack serve --config config/webpack.dev.js",
-        "example:perceptron": "webpack serve example/perceptron/index.js"
+        "start:app": "webpack serve --config config/webpack.dev.js",
+        "build:app": "webpack --config config/webpack.prod.js",
+        "deploy:gh": "gh-pages -d build",
+        "build-deploy:gh": "npm run build:app && npm run deploy:gh",
+        "version": "node config/version.js",
+        "publish:npm": "npm run version && npm publish",
+        "release": "npm run version",
+        "example:perceptron": "webpack serve examples/perceptron/index.js"
     },
     "browserslist": {
         "production": [
@@ -58,5 +67,5 @@
             "last 1 safari version"
         ]
     },
-    "buildDate": "2022-06-19T15:04:37.736Z"
+    "buildDate": "2022-06-27T14:36:31.804Z"
 }

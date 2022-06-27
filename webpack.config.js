@@ -1,5 +1,10 @@
 'use strict'
 
+// "scripts": {
+//     "start": "webpack-dev-server --mode development",
+//     "build": "webpack-dev-server --mode production",
+// }
+
 const dev = require('./config/webpack.dev')
 const prod = require('./config/webpack.prod')
 

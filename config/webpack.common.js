@@ -7,14 +7,9 @@ const paths = require('./paths')
 module.exports = props => {
     return {
         entry: {
-            main: paths.src + '/index.js'
+            app: paths.app + '/index.js'
             //perceptron: paths.example + 'perceptron/index.js',
             //main: paths.example + 'perceptron/index.js'
-        },
-        output: {
-            path: paths.build,
-            publicPath: 'auto',
-            clean: true
         },
         module: {
             rules: [
@@ -64,6 +59,22 @@ module.exports = props => {
                     ]
                 },
                 {
+                    test: /\.(hbs|handlebars)$/i,
+                    exclude: /node_modules/,
+                    loader: 'handlebars-loader',
+                    options: {
+                        helperDirs: [
+                            paths.app + '/templates/helpers'
+                        ],
+                        partialDirs: [
+                            paths.app + '/templates',
+                            paths.app + '/templates/partials',
+                            paths.app + '/templates/pages',
+                            paths.app + '/templates/layouts'
+                        ]
+                    }
+                },
+                {
                     test: /\.(svg|gif|png|jpe?g)$/i,
                     type: 'asset/resource',
                     generator: {
@@ -95,11 +106,11 @@ module.exports = props => {
                 ]
             }),
             new HtmlWebpackPlugin({
-                title: "Jet - Template",
+                title: 'JSNN - Template',
                 template: paths.public + '/template.html',
                 filename: 'index.html',
                 inject: 'body',
-                minify: false
+                minify: true
             })
         ],
         resolve: {
@@ -108,7 +119,7 @@ module.exports = props => {
             alias: {
                 '~': paths.src,
                 '@': paths.src + '/js',
-                jet$: paths.src + '/jet.js'
+                jsnn$: paths.src + '/jet.js'
             }
         }
     }

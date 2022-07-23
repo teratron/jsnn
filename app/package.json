@@ -1,0 +1,29 @@
+{
+  "name": "jsnn-app",
+  "version": "0.0.1",
+  "description": "Web application for JSNN",
+  "private": true,
+  "homepage": "https://teratron.github.io/jettix",
+  "devDependencies": {
+    "copy-webpack-plugin": "^11.0.0",
+    "css-loader": "^6.7.1",
+    "html-webpack-plugin": "^5.5.0",
+    "mini-css-extract-plugin": "^2.6.1",
+    "postcss-loader": "^7.0.1",
+    "postcss-preset-env": "^7.7.2",
+    "sass": "^1.54.0",
+    "sass-loader": "^13.0.2",
+    "style-loader": "^3.3.1",
+    "gh-pages": "^4.0.0",
+    "handlebars": "^4.7.7",
+    "handlebars-loader": "^1.7.2"
+  },
+  "scripts": {
+    "start": "webpack serve --config config/webpack.dev.js",
+    "build": "webpack --config config/webpack.prod.js",
+    "build:dev": "webpack --config config/webpack.prod.js --node-env build-dev",
+    "deploy:gh": "gh-pages -d build",
+    "build-deploy:gh": "gh-pages-clean && npm run build && npm run deploy:gh"
+  },
+  "buildDate": "2022-07-06T05:33:30.814Z"
+}

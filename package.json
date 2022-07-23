@@ -1,71 +1,64 @@
 {
-    "name": "jsnn",
-    "version": "0.0.10",
-    "description": "Neural network package for javascript",
-    "main": "src/index.js",
-    "files": [
-        "dist/**/*.{js,map}",
-        "src/**/*.{scss,js}"
+  "name": "jsnn",
+  "version": "0.0.11",
+  "description": "Neural network package for javascript",
+  "private": false,
+  "main": "src/index.js",
+  "files": [
+    "dist/**/*.{js,map}"
+  ],
+  "keywords": [
+    "neural network",
+    "neural-network",
+    "neural",
+    "network",
+    "perceptron",
+    "javascript"
+  ],
+  "author": "Oleg Alexandrov <alexandrovoleg.ru@gmail.com>",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/teratron/jsnn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/teratron/jsnn/issues"
+  },
+  "homepage": "https://teratron.github.io/jsnn",
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@babel/preset-env": "^7.18.9",
+    "babel-loader": "^8.2.5",
+    "jest": "^28.1.3",
+    "semver-extended-webpack-plugin": "^1.3.0",
+    "webpack": "^5.73.0",
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.9.3",
+    "webpack-merge": "^5.8.0"
+  },
+  "scripts": {
+    "version": "node config/version.js",
+    "publish:npm": "npm run version && npm publish",
+    "release": "npm run version",
+    "example:perceptron": "webpack serve examples/perceptron/index.js",
+    "build": "webpack --config config/webpack.prod.js",
+    "deploy:npm": "npm publish",
+    "build-deploy:npm": "npm run build && npm run deploy:npm"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
     ],
-    "keywords": [
-        "neural network",
-        "neural-network",
-        "neural",
-        "network",
-        "perceptron",
-        "javascript"
-    ],
-    "author": "Oleg Alexandrov <alexandrovoleg.ru@gmail.com>",
-    "license": "ISC",
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/teratron/jsnn.git"
-    },
-    "bugs": {
-        "url": "https://github.com/teratron/jsnn/issues"
-    },
-    "homepage": "https://teratron.github.io/jsnn",
-    "devDependencies": {
-        "@babel/core": "^7.18.5",
-        "@babel/preset-env": "^7.18.2",
-        "babel-loader": "^8.2.5",
-        "copy-webpack-plugin": "^11.0.0",
-        "css-loader": "^6.7.1",
-        "html-webpack-plugin": "^5.5.0",
-        "jest": "^28.1.1",
-        "mini-css-extract-plugin": "^2.6.1",
-        "postcss-loader": "^7.0.0",
-        "postcss-preset-env": "^7.7.2",
-        "sass": "^1.53.0",
-        "sass-loader": "^13.0.1",
-        "semver-extended-webpack-plugin": "^1.3.0",
-        "style-loader": "^3.3.1",
-        "webpack": "^5.73.0",
-        "webpack-cli": "^4.10.0",
-        "webpack-dev-server": "^4.9.2",
-        "webpack-merge": "^5.8.0"
-    },
-    "scripts": {
-        "start:app": "webpack serve --config config/webpack.dev.js",
-        "build:app": "webpack --config config/webpack.prod.js",
-        "deploy:gh": "gh-pages -d build",
-        "build-deploy:gh": "npm run build:app && npm run deploy:gh",
-        "version": "node config/version.js",
-        "publish:npm": "npm run version && npm publish",
-        "release": "npm run version",
-        "example:perceptron": "webpack serve examples/perceptron/index.js"
-    },
-    "browserslist": {
-        "production": [
-            ">0.2%",
-            "not dead",
-            "not op_mini all"
-        ],
-        "development": [
-            "last 1 chrome version",
-            "last 1 firefox version",
-            "last 1 safari version"
-        ]
-    },
-    "buildDate": "2022-06-27T14:36:31.804Z"
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "workspaces": [
+    "app"
+  ],
+  "buildDate": "2022-07-23T10:10:31.987Z"
 }
